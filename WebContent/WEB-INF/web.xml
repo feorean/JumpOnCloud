@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+    
+	<filter>
+	    <filter-name>RequestFilter</filter-name>
+	    <filter-class>io.jumpon.api.RequestFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	    <filter-name>RequestFilter</filter-name>
+	    <url-pattern>*.html</url-pattern>
+	</filter-mapping>
+    
+  <servlet>
+    <servlet-name>log4j-init</servlet-name>
+    <servlet-class>io.jumpon.api.Log4jInit</servlet-class>
+    <init-param>
+      <param-name>log4j-init-file</param-name>
+      <param-value>WEB-INF/log4j.properties</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>addtag</servlet-name>
+    <servlet-class>io.jumpon.api.addtag</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addtag</servlet-name>
+    <url-pattern>/addtag</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>deletejump</servlet-name>
+    <servlet-class>io.jumpon.api.deletejump</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletejump</servlet-name>
+    <url-pattern>/deletejump</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>getjump</servlet-name>
+    <servlet-class>io.jumpon.api.getjump</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getjump</servlet-name>
+    <url-pattern>/getjump</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>jump</servlet-name>
+    <servlet-class>io.jumpon.api.jump</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jump</servlet-name>
+    <url-pattern>/jump</url-pattern>
+  </servlet-mapping>
+        
+  <servlet>
+    <servlet-name>getjumps</servlet-name>
+    <servlet-class>io.jumpon.api.getjumps</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getjumps</servlet-name>
+    <url-pattern>/getjumps</url-pattern>
+  </servlet-mapping>
+                        
+  <servlet>
+    <servlet-name>gettoptags</servlet-name>
+    <servlet-class>io.jumpon.api.gettoptags</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>gettoptags</servlet-name>
+    <url-pattern>/gettoptags</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>authcomplete</servlet-name>
+    <servlet-class>io.jumpon.api.authcomplete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>authcomplete</servlet-name>
+    <url-pattern>/authcomplete</url-pattern>
+  </servlet-mapping>
+     
+  <servlet>
+    <servlet-name>auth</servlet-name>
+    <servlet-class>io.jumpon.api.auth</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>auth</servlet-name>
+    <url-pattern>/auth</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>io.jumpon.api.logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>tokencallback</servlet-name>
+    <servlet-class>io.jumpon.api.tokencallback</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tokencallback</servlet-name>
+    <url-pattern>/tokencallback</url-pattern>
+  </servlet-mapping>     
+
+  <servlet>
+    <servlet-name>getusername</servlet-name>
+    <servlet-class>io.jumpon.api.getusername</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getusername</servlet-name>
+    <url-pattern>/getusername</url-pattern>
+  </servlet-mapping>     
+  
+  <servlet>
+    <servlet-name>myjumps</servlet-name>
+    <servlet-class>io.jumpon.api.myjumps</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myjumps</servlet-name>
+    <url-pattern>/myjumps</url-pattern>
+  </servlet-mapping>     
+              
+    
+  <servlet>
+    <servlet-name>testtest</servlet-name>
+    <servlet-class>io.jumpon.api.testtest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testtest</servlet-name>
+    <url-pattern>/testtest</url-pattern>
+  </servlet-mapping>  
+  
+  <context-param>
+    <description>Google auth URL</description>
+    <param-name>oauthURL</param-name>
+    <param-value>
+             https://www.googleapis.com/oauth2/v4/token
+         </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Google cloud client_id</description>
+    <param-name>clientID</param-name>
+    <param-value>
+             XXXXXXXXXXXX.apps.googleusercontent.com
+         </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Google client secret</description>
+    <param-name>clientSecret</param-name>
+    <param-value>
+             XXXXXXXXXXXX
+         </param-value>
+  </context-param>
+  
+  <context-param>
+    <description>Google API email URL</description>
+    <param-name>googleApiEmailUrl</param-name>
+    <param-value>
+             https://www.googleapis.com/plus/v1/people/me
+         </param-value>
+  </context-param>  
+  
+  <context-param>
+    <description>Google API email scope</description>
+    <param-name>googleApiEmailScope</param-name>
+    <param-value>
+             https://www.googleapis.com/auth/userinfo.email
+         </param-value>
+  </context-param>   
+  
+   <context-param>
+    <description>Bing search secret key</description>
+    <param-name>bingSearchKey</param-name>
+    <param-value>
+             XXXXXXXXXXXX
+         </param-value>
+  </context-param> 
+  
+   <context-param>
+    <description>Bing search suggestions secret key</description>
+    <param-name>bingSearchSuggestionsKey</param-name>
+    <param-value>
+             XXXXXXXXXXXX
+         </param-value>
+  </context-param>   
+  
+  <context-param>
+    <description>Jumpon private key file</description>
+    <param-name>jumponPrivateKeyFile</param-name>
+    <param-value>
+             /XXXXXXXXXXXX/private_key.der
+         </param-value>
+  </context-param>   
+
+  <context-param>
+    <description>Jumpon public key file</description>
+    <param-name>jumponPublicKeyFile</param-name>
+    <param-value>
+             /XXXXXXXXXXXX/public_key.der
+         </param-value>
+  </context-param>   
+  
+  <context-param>
+    <description>Abs credentials folder</description>
+    <param-name>aws_credentials_location</param-name>
+    <param-value>
+             /XXXXXXXXX/.aws/credentials
+         </param-value>
+  </context-param>  
+
+  <context-param>
+    <description>Logging behaviour</description>
+    <param-name>logLevel</param-name>
+    <param-value>
+           debug, error, info
+         </param-value>
+  </context-param>  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  
+  
+   <listener>
+	<listener-class>
+             io.jumpon.api.JumpOnServletContextListener 
+        </listener-class>
+   </listener>  
+  
+  
+</web-app>

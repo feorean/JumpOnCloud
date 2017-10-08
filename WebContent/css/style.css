@@ -1,0 +1,248 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.desc-font {  
+	color: #FFF;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    /*-webkit-text-stroke: 2px white;*/
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.background-colour {
+	
+	background-color:azure;
+}
+
+.header-background-colour {
+	
+	background-color:#003a5c;
+}
+
+.footer-colour {
+	
+	background-color:aqua;
+}
+
+
+.top-padding {
+	padding-top:15px;
+}
+
+
+
+@media (max-width: 480px) { 
+	
+	.header-padding {
+		margin-left:0px;
+		margin-right:0px;
+	}
+}
+
+@media (min-width: 978px) { 
+	
+	.large-input {
+	
+		height:90px;		
+		font-size:3.5em;
+		
+	}
+
+	.header-padding {
+		padding:10px 10px;
+	}
+
+}
+
+.find-group {
+	
+	width: 100%;
+}
+
+.top-row {
+	
+	padding-top: 10%;
+}
+
+
+.middle-row {
+	
+	height:20%;
+}
+
+.bootom-row {
+	
+	padding-top:3%;
+}
+
+.suggestList {
+	
+	width: 100%;
+	float: none;
+	margin-top:0;
+	cursor:pointer;
+}
+
+.floatingsuggestion {
+	
+	position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: 99;
+}
+
+.no-padding {
+	
+	padding:0;
+}
+
+
+.ext_buttons {
+	
+	width: 20em;
+}
+
+.initial {
+	
+	display: initial;
+}
+
+.inline-display {
+	
+	display:inline;
+}
+
+.dunderline {    
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+    display:inline;
+}	
+	
+.vcenter {
+    display: inline;
+    vertical-align: middle;
+    float: none;
+}
+
+.find-objects {
+	float:none;
+	width: 50em;
+	max-width: 100%;
+	
+}
+
+.center-margin {
+	margin: 0 auto;
+}
+
+.jump-btn {
+	max-width: 95%;
+}
+
+
+.alerttip {
+
+	margin-bottom:0;
+	/*padding:0;*/
+
+}
+
+.shadow {
+	box-shadow: 1px 5px 15px #888888;
+}
+
+.transparent {
+	
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.histJumps {
+	
+	background: honeydew;
+	font-style: italic;
+}
+
+
+.userJumps {
+	
+	font-weight:bold;
+	background: antiquewhite;
+}
+
+.globalJumps {
+	
+	font-weight:bold;
+}
+
+.searchJumps {
+	
+	
+}
+
+.jump-item:hover {
+	
+	background: turquoise;
+	
+
+}
+
+
+#contextMenu {
+  	position: absolute;
+  	display:none;
+}
+
+
+.footer {
+	
+	padding:10px 0px;
+	/*background:lightgray;*/
+	text-align:center;
+	margin: 5em 0 0;
+	height: 10em;
+	vertical-align: middle;
+}
+
+.internal-page {
+	
+	width:100%;
+	height:50em;	
+	
+	margin: 0;
+	
+}
+	
+.internal-frame {	
+	
+	width:100%;
+	height:100%;	
+	
+}
+
+
+.navbar {
+	
+	margin-bottom: 0px;
+}
+
+.tiny-font {
+	
+	font: 8px "Lucida Grande", Helvetica, Arial, sans-serif;
+	
+}
+
+@media (max-width: 850px) { 
+	.list-group-item {
+		
+		font: 1.2em "Lucida Grande", Helvetica, Arial, sans-serif;
+		padding-left: 1em;
+	}
+}
